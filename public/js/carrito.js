@@ -1,19 +1,19 @@
 const productosApi = {
-    get: () => {
-        return fetch('/api/productos')
-            .then(data => data.json())
+    get: async () => {
+        const data = await fetch('/api/productos')
+        return await data.json()
     }
 }
 
 const carritosApi = {
-    crearCarrito: () => {
+    crearCarrito: async () => {
         const options = { method: "POST" }
-        return fetch('/api/carritos', options)
-            .then(data => data.json())
+        const data = await fetch('/api/carritos', options)
+        return await data.json()
     },
-    getIds: () => {
-        return fetch('/api/carritos')
-            .then(data => data.json())
+    getIds: async () => {
+        const data = await fetch('/api/carritos')
+        return await data.json()
     },
     postProd: (idCarrito, idProd) => {
         const data = { id: idProd }
@@ -26,9 +26,9 @@ const carritosApi = {
         }
         return fetch(`/api/carritos/${idCarrito}/productos`, options)
     },
-    getProds: idCarrito => {
-        return fetch(`/api/carritos/${idCarrito}/productos`)
-            .then(data => data.json())
+    getProds: async idCarrito => {
+        const data = await fetch(`/api/carritos/${idCarrito}/productos`)
+        return await data.json()
     },
     deleteProd: (idCarrito, idProducto) => {
         const options = {

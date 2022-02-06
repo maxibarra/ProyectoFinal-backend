@@ -16,13 +16,13 @@ switch (process.env.PERS) {
         productosDao = new ProductosDaoFirebase()
         carritosDao = new CarritosDaoFirebase()
         break
-    case 'mongodb':
-        const { default: ProductosDaoMongoDb } = await import('./productos/ProductosDaoMongoDb.js')
-        const { default: CarritosDaoMongoDb } = await import('./carritos/CarritosDaoMongoDb.js')
+    // case 'mongodb':
+    //     const { default: ProductosDaoMongoDb } = await import('./productos/ProductosDaoMongoDb.js')
+    //     const { default: CarritosDaoMongoDb } = await import('./carritos/CarritosDaoMongoDb.js')
 
-        productosDao = new ProductosDaoMongoDb()
-        carritosDao = new CarritosDaoMongoDb()
-        break
+    //     productosDao = new ProductosDaoMongoDb()
+    //     carritosDao = new CarritosDaoMongoDb()
+    //     break
     case 'mariadb':
         const { default: ProductosDaoMariaDb } = await import('./productos/ProductosDaoMariaDb.js')
         const { default: CarritosDaoMariaDb } = await import('./carritos/CarritosDaoMariaDb.js')

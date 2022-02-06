@@ -3,7 +3,7 @@ export default {
         path: './DB'
     },
     mongodb: {
-        cnxStr: 'mongodb://localhost/ecommerce',
+        cnxStr: 'mongodb://localhost/proyectofinal',
         options: {
             useNewUrlParser: true,
             useUnifiedTopology: true,

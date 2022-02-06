@@ -1,7 +1,7 @@
 const productosApi = {
-    get: () => {
-        return fetch('/api/productos')
-            .then(data => data.json())
+    get: async () => {
+        const data = await fetch(`/api/productos`);
+        return await data.json()
     },
     post: (nuevoProd) => {
         const options = {
@@ -11,7 +11,7 @@ const productosApi = {
             },
             body: JSON.stringify(nuevoProd)
         }
-        return fetch('/api/productos', options)
+        return fetch('/api/productos',options)
     },
     put: (idProd, nuevoProd) => {
         const options = {
@@ -59,12 +59,10 @@ function leerProductoDelFormulario() {
     return producto
 }
 
-function actualizarListaProductos() {
-    return productosApi.get()
-        .then(prods => makeHtmlTable(prods))
-        .then(html => {
-            document.getElementById('productos').innerHTML = html
-        })
+async function actualizarListaProductos() {
+    const prods = await productosApi.get()
+    const html = await makeHtmlTable(prods)
+    document.getElementById('productos').innerHTML = html
 }
 
 function borrarProducto(idProd) {
@@ -80,8 +78,8 @@ function actualizarProducto(idProd) {
 
 
 function llenarFormulario(title = '', price = '', thumbnail = '') {
-    formAgregarProducto[0].value = title
-    formAgregarProducto[1].value = price
+    formAgregarProducto[0].value = title,
+    formAgregarProducto[1].value = price,
     formAgregarProducto[2].value = thumbnail
 }
 

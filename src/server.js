@@ -5,6 +5,7 @@ import authRouter from './routers/auth.js'
 import carritosRouter from './routers/carritos.js'
 import productosRouter from './routers/productos.js'
 
+
 //--
 //servidor
 
@@ -12,7 +13,7 @@ const app = express()
 
 //---
 // configuro el servidor
-
+app.use(express.text)
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('public'))
