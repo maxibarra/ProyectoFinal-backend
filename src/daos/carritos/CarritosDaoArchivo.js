@@ -1,14 +1,14 @@
-import ContenedorArchivo from "../../contenedores/ContenedorArchivo.js"
+// import ContenedorArchivo from "../../contenedores/ContenedorArchivo.js"
 
-class CarritosDaoArchivo extends ContenedorArchivo {
+// class CarritosDaoArchivo extends ContenedorArchivo {
 
-    constructor() {
-        super('carritos.json')
-    }
+//     constructor() {
+//         super('carritos.json')
+//     }
 
-    async guardar(carrito = { productos: [] }) {
-        return super.guardar(carrito)
-    }
-}
+//     async guardar(carrito = { productos: [] }) {
+//         return super.guardar(carrito)
+//     }
+// }
 
-export default CarritosDaoArchivo
+// export default CarritosDaoArchivo
