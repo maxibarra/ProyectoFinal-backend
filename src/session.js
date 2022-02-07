@@ -1,22 +1,22 @@
 import app from './server';
 const express = require('express');
 const session = require('express-session');
-// const MongoStore = require('connect-mongo');
+const MongoStore = require('connect-mongo');
 
 
 app.use(express.json());
 app.use(express.text());
 
-// app.use(session({
-//     store: MongoStore.create({mongoUrl: 'mongodb://localhost:8080/sesiones',ttl:600}),
-//     secret:'asdfg',
-//     resave:false,
-//     saveUninitialized:false,
-//     rolling:true,
-//     cookie:{
-//         maxAge:600000
-//     }
-// }))
+app.use(session({
+    store: MongoStore.create({mongoUrl: 'mongodb://localhost:8080/sesiones',ttl:600}),
+    secret:'asdfg',
+    resave:false,
+    saveUninitialized:false,
+    rolling:true,
+    cookie:{
+        maxAge:600000
+    }
+}))
 
 
 // app.get('/',(req,res) => {

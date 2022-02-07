@@ -1,6 +1,6 @@
 const productosApi = {
     get: async () => {
-        const data = await fetch(`/api/productos`);
+        const data = await fetch('/api/productos')
         return await data.json()
     },
     post: (nuevoProd) => {
@@ -11,7 +11,7 @@ const productosApi = {
             },
             body: JSON.stringify(nuevoProd)
         }
-        return fetch('/api/productos',options)
+        return fetch('/api/productos', options)
     },
     put: (idProd, nuevoProd) => {
         const options = {
@@ -78,8 +78,8 @@ function actualizarProducto(idProd) {
 
 
 function llenarFormulario(title = '', price = '', thumbnail = '') {
-    formAgregarProducto[0].value = title,
-    formAgregarProducto[1].value = price,
+    formAgregarProducto[0].value = title
+    formAgregarProducto[1].value = price
     formAgregarProducto[2].value = thumbnail
 }
 
