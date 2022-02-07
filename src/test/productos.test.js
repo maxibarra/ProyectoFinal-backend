@@ -1,7 +1,7 @@
 import axios from 'axios';
 import assert from 'assert';
 
-const API_URL = 'http://localhost:8080';
+const API_URL = 'http://localhost/';
 const API_PRODUCTS = `${API_URL}/api/productos`;
 let productId = null;
 
