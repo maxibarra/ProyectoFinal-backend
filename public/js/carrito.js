@@ -98,7 +98,7 @@ function makeHtmlTable(productos) {
             }
         </style>`
 
-    if (productos.length > 0) {
+    if (productos.length>0) {
         html += `
         <h2>Lista de Productos</h2>
         <div class="table-responsive">

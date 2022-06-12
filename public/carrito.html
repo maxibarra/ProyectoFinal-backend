@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous">
     <link rel="stylesheet" href="css/estilos.css">
-</head>
+  </head>
 
-<body>
+  <body>
 
     <div class="container mt-2">
-        <div class="jumbotron">
-            <h1>Agregar Producto al Carrito</h1>
-            <br>
-            <select id="comboCarritos" name="comboCarritos"></select>
-            <br>
-            <select id="comboProductos" name="comboProductos"></select>
-            <br>
-            <button id="btnAgregarAlCarrito">Agregar</button>
-            <br>
-            <div id="carrito"></div>
-            <br>
-            <button id="btnCrearCarrito">Crear Carrito</button>
-        </div>
+      <div class="jumbotron">
+        <h1>Agregar Producto al Carrito</h1>
+        <br>
+        <select id="comboCarritos" name="comboCarritos"></select>
+        <br>
+        <select id="comboProductos" name="comboProductos"></select>
+        <br>
+        <button id="btnAgregarAlCarrito">Agregar</button>
+        <br>
+        <div id="carrito"></div>
+        <br>
+        <button id="btnCrearCarrito">Crear Carrito</button>
+      </div>
 
-        <div style="float: right">
-            <h2>Centro de mensajes</h2>
-            <div
-              id="messages"
-              style="border: 1px solid red; height: 150px; width:550px; margin: 5px"
-            ></div>
-            <div id="chat">
-              <form action="">
-                <label for=""> Email: </label>
-                <input
-                  type="email"
-                  id="username"
-                  placeholder="ingresa tu email"
-                  required
-                />
-                <br />
-                <label for="">Mensaje:</label>
-                <input
-                  type="text"
-                  id="text"
-                  placeholder="Deje su consulta"
-                  style="margin: 10px"
-                />
-                <br />
-                <input type="submit" />
-              </form>
-            </div>
-          </div>
+      <div style="float: right">
+        <h2>Centro de mensajes</h2>
+        <div
+          id="messages"
+          style="border: 1px solid red; height: 150px; width:550px; margin: 5px"></div>
+        <div id="chat">
+          <form action="">
+            <label for=""> Email: </label>
+            <input
+              type="email"
+              id="username"
+              placeholder="ingresa tu email"
+              required
+              />
+            <br />
+            <label for="">Mensaje:</label>
+            <input
+              type="text"
+              id="text"
+              placeholder="Deje su consulta"
+              style="margin: 10px"
+              />
+            <br />
+            <input type="submit" />
+          </form>
+        </div>
+      </div>
     </div>
 
-   
+
 
     <script src="js/carrito.js"></script>
 
-</body>
+  </body>
 
 </html>
